@@ -5,7 +5,13 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODOS_LS = 'toDOs';
 
 function paintToDo(text){
-     
+    const li = document.createElement("ul");
+    const delBtn = document.createElement("button");
+    delBtn.value = "X";
+    const span = document.createElement("span");
+    span.innerText = text;
+    li.appendChild(span);
+    li.appendChild(delBtn);
 }
 
 function loadToDos(){
